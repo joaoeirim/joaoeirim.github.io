@@ -1,0 +1,111 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f1eeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.jogo {
+  position: relative;
+  width: 900px;  
+  height: 900px;
+  background: #222;
+  border: 5px solid black;
+  overflow: hidden;
+  user-select: none;
+}
+
+.pontuacao, .tempo {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 10px;
+  font-size: 24px;
+  color: white;
+  z-index: 20;
+}
+
+.tempo { left: 20px; }
+.pontuacao { right: 20px; }
+
+#cenario {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: url('cenario.png') repeat-y; 
+  background-size: cover;
+  background-position: center bottom;
+  z-index: 1;
+}
+#nave {
+  position: absolute;
+  width: 92px;
+  height: 122px;
+  bottom: 20px; 
+  left: 450px; 
+  transform: translateX(-50%);
+  background: url('avião.png') no-repeat center;
+  background-size: contain;
+  z-index: 10;
+}
+
+.bomba, .moeda {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  transform: translateX(-50%);
+  z-index: 5;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bomba {
+  background-image: url('navio1.png');
+}
+.moeda {
+  background-image: url('moeda.png');
+}
+
+#Telainicio {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: flex; /* Visível ao carregar */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#gameOver {
+  position: absolute;
+  inset: 0;
+  color: white;
+  display: none; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#gameOver h1, #Telainicio h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+#gameOver p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+#gameOver button, #Telainicio button {
+  padding: 15px 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}

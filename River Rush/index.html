@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>River Rush</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <div class="jogo">
+        <div id="cenario"></div>
+        <div id="nave"></div>
+        
+        <div class="tempo">
+            Tempo <span id="tempo">30</span>
+        </div>
+        <div class="pontuacao">
+            Pontuação <span id="pontuacao">0</span>
+        </div>
+
+        <div id="Telainicio">
+            <h1>RIVER RUSH</h1>
+            <button onclick="startGame()">Jogar</button>
+        </div>
+        
+        <div id="gameOver">
+            <h1>GAME OVER</h1>
+            <p>combustivel coletado: <span id="PontuacaoFinal"></span></p>
+            <button onclick="restartGame()">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
